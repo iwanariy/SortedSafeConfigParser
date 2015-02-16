@@ -12,7 +12,7 @@ python setup.py install
 
 
 ## Get Started
-Usage is almost same as Safeconfigparser.  
+Usage is almost same as SafeConfigParser.  
 Specify argument "sort=True" in order to sort output ini file.  
 
 ```python
