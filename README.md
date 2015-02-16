@@ -9,3 +9,22 @@ Except write(), same as SafeConfigParser.
 git clone https://github.com/narikin/SortedSafeConfigParser.git
 python setup.py install
 ```
+
+
+## Get Started
+Usage is almost same as Safeconfigparser.  
+Specify argument "sort=True" in order to sort output ini file.  
+
+```python
+from SortedSafeConfigParser import SortedSafeConfigParser
+
+
+if __name__ == '__main__':
+    config = SortedSafeConfigParser.SortedSafeConfigParser()
+    config.read('./sample.ini')
+
+    with open('./result.ini', 'w') as f:
+        config.write(f)               # not sorted
+        config.write(f, sort=True)    # sorted
+        config.write(f, sort=False)   # not sorted
+```
